@@ -25,10 +25,23 @@ def main():
 
     # Definisanje liste JSON komandi koje ćemo slati
     json_commands = [
-        {"T": 1041, "x": 235, "y": 0, "z": 234, "t": 3.14},
-        {"T": 1041, "x": 120, "y": 10, "z": 150, "t": 1.57},
-        {"T": 1041, "x": 300, "y": -50, "z": 200, "t": 2.71},
-        {"T": 1041, "x": 50, "y": 20, "z": 100, "t": 0.78}
+        {"T": 210, "cmd": 1},
+        {"T":100},
+        {"T": 122, "b": 0, "s": 0, "e": 90, "h": 0, "spd": 60, "acc": 10}, # uzmi sundjer
+        {"T": 122, "b": 0, "s": 0, "e": 90, "h": 180, "spd": 60, "acc": 10}, # ostavi sundjer
+        {"T":122,"b":0,"s":50,"e":90,"h":180,"spd":60,"acc":10}, #spusta se u polozaj za brisanje
+        {"T": 122, "b": -90, "s": 50, "e": 90, "h": 180, "spd": 60, "acc": 10}, #rotacija baze
+        {"T": 122, "b": -90, "s": 50, "e": 90, "h": 180, "spd": 60, "acc": 10}, #rotacija baze
+        {"T": 122, "b": -90, "s": 45, "e": 105, "h": 180, "spd": 60, "acc": 10}, # smanjivanje obima
+        {"T": 122, "b": 0, "s": 45, "e": 105, "h": 180, "spd": 60, "acc": 10}, # rotacija baze
+        {"T": 122, "b": 0, "s": 42, "e": 115, "h": 180, "spd": 60, "acc": 10}, # smanjivanje obima
+        {"T": 122, "b": -90, "s": 42, "e": 115, "h": 180, "spd": 60, "acc": 10}, # rotacija baze
+        {"T": 122, "b": -90, "s": 38, "e": 125, "h": 180, "spd": 60, "acc": 10}, # smanjivanje obima
+        {"T": 122, "b": 0, "s": 38, "e": 125, "h": 180, "spd": 60, "acc": 10}, # rotacija baze
+        {"T": 122, "b": 0, "s": 34, "e": 135, "h": 180, "spd": 60, "acc": 10}, # smanjivanje obima
+        {"T": 122, "b": -90, "s": 34, "e": 135, "h": 180, "spd": 60, "acc": 10}, # rotacija baze
+        {"T": 122, "b": -90, "s": 31, "e": 145, "h": 180, "spd": 60, "acc": 10}, # smanjivanje obima
+        {"T": 122, "b": 0, "s": 31, "e": 145, "h": 180, "spd": 60, "acc": 10}, # rotacija baze
     ]
 
     try:
@@ -41,7 +54,7 @@ def main():
                 print(f"Sent: {command_str}")
 
                 # Pauza između slanja komandi (npr. 1 sekunda)
-                time.sleep(1)
+                time.sleep(2)
     except KeyboardInterrupt:
         pass
     finally:
